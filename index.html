@@ -1,400 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="D S India Private Limited provides DSC, GST return filing, PF ESI compliance, income tax, ITR filing, accounting, auditing and business compliance services across India." />
-  <meta name="keywords" content="DSC services, Class 3 DSC, GST return filing, PF return filing, ESI return filing, ITR filing, Income Tax case, Accounting, Auditing, Business Compliance India" />
-  <meta name="author" content="D S India Private Limited" />
-  <meta property="og:title" content="D S India Private Limited | DSC, Tax & Compliance Advisory" />
-  <meta property="og:description" content="Affordable and professional DSC, GST, PF, ESI, Income Tax, Accounting and Audit services." />
-  <meta property="og:type" content="website" />
-  <title>D S India Private Limited | DSC, Tax & Compliance Advisory</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
-    :root {
-      --primary: #06101f;
-      --secondary: #0b1f3a;
-      --accent: #d4af37;
-      --accent2: #f7d774;
-      --blue: #1d4ed8;
-      --text: #1f2937;
-      --muted: #64748b;
-      --light: #f8fafc;
-      --white: #ffffff;
-      --green: #16a34a;
-    }
-    html { scroll-behavior: smooth; }
-    body { color: var(--text); background: var(--light); line-height: 1.6; }
-    a { text-decoration: none; }
+<title>D S India Private Limited | Compliance, Accounting & Growth</title>
+<meta name="description" content="D S India Private Limited provides DSC, GST return filing, PF ESI compliance, income tax, ITR filing, accounting, bookkeeping, auditing and business advisory services across India." />
 
-    header {
-      background: rgba(6, 16, 31, 0.97);
-      color: white;
-      padding: 16px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.22);
-      backdrop-filter: blur(14px);
-    }
-    .logo { font-size: 24px; font-weight: 800; letter-spacing: 0.3px; }
-    .logo span { color: var(--accent); }
-    nav a { color: white; margin-left: 22px; font-weight: 600; font-size: 14px; opacity: .92; cursor: pointer; }
-    nav a:hover { color: var(--accent); }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
 
-    .page { display: none; animation: pageFade .45s ease; }
-    .page.active { display: block; }
-    @keyframes pageFade { from {opacity:0; transform: translateY(10px);} to {opacity:1; transform: translateY(0);} }
+:root {
+    --navy: #06101f;
+    --navy2: #0b2548;
+    --gold: #d4af37;
+    --gold2: #f7d774;
+    --blue: #1d4ed8;
+    --white: #ffffff;
+    --light: #f6f8fb;
+    --text: #1f2937;
+    --muted: #64748b;
+}
 
-    .hero {
-      background:
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: rgba(6, 16, 31, 0.98);
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.22);
+    backdrop-filter: blur(14px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+nav a {
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    min-height: 650px;
+    background:
         radial-gradient(circle at 85% 18%, rgba(212,175,55,0.28), transparent 16%),
         radial-gradient(circle at 75% 58%, rgba(29,78,216,0.25), transparent 25%),
         linear-gradient(120deg, #06101f 0%, #071c36 45%, #0b2548 100%);
-      color: white;
-      padding: 0 7%;
-      min-height: 650px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      overflow: hidden;
-    }
+    color: white;
+    padding: 0 7%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image:
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
         linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 70px 70px;
-      opacity: 0.45;
-    }
+    background-size: 70px 70px;
+    opacity: 0.45;
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: 6%;
-      top: 17%;
-      width: 42%;
-      height: 52%;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 62%);
-      pointer-events: none;
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold2);
+    border: 1px solid rgba(212,175,55,0.45);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    line-height: 1.12;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-content p {
+    color: #e2e8f0;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.hero-badges span {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #111827;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 800;
+    margin-right: 12px;
+    box-shadow: 0 14px 32px rgba(212,175,55,.25);
+    border: 0;
+    cursor: pointer;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,.35);
+    box-shadow: none;
+}
+
+.hero-visual {
+    position: absolute;
+    right: 5%;
+    bottom: 9%;
+    width: 46%;
+    height: 58%;
+    z-index: 1;
+    opacity: 0.96;
+}
+
+.chart-bars {
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    height: 62%;
+}
+
+.bar {
+    width: 42px;
+    background: linear-gradient(180deg, var(--gold2), var(--gold));
+    opacity: 0.75;
+    border-radius: 8px 8px 0 0;
+    animation: growBar 2.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+.bar:nth-child(1){height:28%;animation-delay:.1s}
+.bar:nth-child(2){height:42%;animation-delay:.3s}
+.bar:nth-child(3){height:58%;animation-delay:.5s}
+.bar:nth-child(4){height:73%;animation-delay:.7s}
+.bar:nth-child(5){height:88%;animation-delay:.9s}
+
+@keyframes growBar {
+    from { transform: scaleY(.88); opacity:.45; }
+    to { transform: scaleY(1); opacity:.85; }
+}
+
+.growth-arrow {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 86%;
+    height: 62%;
+    border-top: 12px solid rgba(255,255,255,0.86);
+    border-right: 12px solid rgba(255,255,255,0.86);
+    transform: rotate(-22deg);
+    border-radius: 0 40px 0 0;
+}
+
+.growth-arrow::after {
+    content: "";
+    position: absolute;
+    right: -26px;
+    top: -34px;
+    border-left: 42px solid rgba(255,255,255,0.86);
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    transform: rotate(45deg);
+}
+
+.line-graph {
+    position: absolute;
+    left: 3%;
+    top: 12%;
+    width: 76%;
+    height: 45%;
+    border-bottom: 2px solid rgba(255,255,255,0.12);
+    border-left: 2px solid rgba(255,255,255,0.12);
+}
+
+.line-graph svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 0 7%;
+    margin-top: -45px;
+    position: relative;
+    z-index: 5;
+}
+
+.stat-card {
+    background: white;
+    padding: 28px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    border-bottom: 4px solid var(--gold);
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    color: #001f45;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-weight: 700;
+    color: #52637a;
+}
+
+section {
+    padding: 78px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 46px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: var(--muted);
+    max-width: 780px;
+    margin: auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.about-box, .leadership-box {
+    background: white;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 8px 28px rgba(15,23,42,.08);
+    border-left: 5px solid var(--blue);
+}
+
+.leadership-box {
+    background: var(--navy);
+    color: white;
+    border-left-color: var(--gold);
+}
+
+.leadership-box h3 {
+    color: var(--gold);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 8px 28px rgba(15,23,42,.08);
+    border-top: 4px solid transparent;
+    transition: all .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-top-color: var(--gold);
+    box-shadow: 0 18px 45px rgba(15,23,42,.14);
+}
+
+.card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card ul {
+    padding-left: 20px;
+    color: #475569;
+}
+
+.insights {
+    background: linear-gradient(135deg, var(--navy), var(--navy2));
+    color: white;
+    overflow: hidden;
+}
+
+.insights .section-title h2,
+.insights .section-title p {
+    color: white;
+}
+
+.quote-slider {
+    max-width: 980px;
+    margin: auto;
+    position: relative;
+    height: 200px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+.quote {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(45px);
+    animation: slideQuotes 40s infinite;
+    text-align: center;
+    max-width: 850px;
+    padding: 0 25px;
+}
+
+.quote:nth-child(1){animation-delay:0s}
+.quote:nth-child(2){animation-delay:5s}
+.quote:nth-child(3){animation-delay:10s}
+.quote:nth-child(4){animation-delay:15s}
+.quote:nth-child(5){animation-delay:20s}
+.quote:nth-child(6){animation-delay:25s}
+.quote:nth-child(7){animation-delay:30s}
+.quote:nth-child(8){animation-delay:35s}
+
+.quote h3 {
+    font-size: 28px;
+    line-height: 1.35;
+    color: white;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.quote p {
+    color: var(--gold);
+    font-weight: 800;
+}
+
+@keyframes slideQuotes {
+    0%{opacity:0;transform:translateX(45px)}
+    3%{opacity:1;transform:translateX(0)}
+    10%{opacity:1;transform:translateX(0)}
+    13%{opacity:0;transform:translateX(-45px)}
+    100%{opacity:0;transform:translateX(-45px)}
+}
+
+.why {
+    background: #eef3f9;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.why-card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 6px;
+    text-align: center;
+    border-bottom: 4px solid var(--blue);
+    box-shadow: 0 8px 24px rgba(15,23,42,.08);
+}
+
+.currency {
+    background: white;
+}
+
+.currency-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.currency-card {
+    background: #f8fafc;
+    padding: 22px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 8px 20px rgba(0,0,0,.06);
+    border-radius: 5px;
+}
+
+.currency-card h3 {
+    color: var(--navy);
+}
+
+.currency-card strong {
+    font-size: 26px;
+    color: var(--navy);
+}
+
+.contact {
+    background: linear-gradient(135deg, var(--navy), var(--navy2));
+    color: white;
+}
+
+.contact .section-title h2,
+.contact .section-title p {
+    color: white;
+}
+
+.contact-box {
+    background: white;
+    color: #111;
+    padding: 34px;
+    border-radius: 6px;
+    max-width: 760px;
+    margin: auto;
+    border-top: 5px solid var(--gold);
+}
+
+footer {
+    background: #020617;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 26px;
+    font-size: 14px;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25d366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 1200;
+    box-shadow: 0 12px 28px rgba(0,0,0,.28);
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 16px 4%;
+    }
+    nav {
+        gap: 18px;
+    }
+    nav a {
+        font-size: 13px;
+    }
+    .logo {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-grid,
+    .grid,
+    .why-grid,
+    .stats,
+    .currency-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero-visual {
-      position: absolute;
-      right: 5%;
-      bottom: 9%;
-      width: 46%;
-      height: 58%;
-      z-index: 1;
-      opacity: 0.96;
+        opacity: .35;
+        width: 65%;
+        right: -5%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 14px 4%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow-x: auto;
     }
 
-    .chart-bars {
-      position: absolute;
-      right: 4%;
-      bottom: 0;
-      display: flex;
-      align-items: flex-end;
-      gap: 18px;
-      height: 62%;
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 18px;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 0;
+        width: auto;
     }
 
-    .bar {
-      width: 42px;
-      background: linear-gradient(180deg, var(--accent2), var(--accent));
-      opacity: 0.75;
-      border-radius: 8px 8px 0 0;
-      animation: growBar 2.5s ease-in-out infinite alternate;
-      transform-origin: bottom;
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
-    .bar:nth-child(1){height:28%;animation-delay:.1s}.bar:nth-child(2){height:42%;animation-delay:.3s}.bar:nth-child(3){height:58%;animation-delay:.5s}.bar:nth-child(4){height:73%;animation-delay:.7s}.bar:nth-child(5){height:88%;animation-delay:.9s}
-
-    @keyframes growBar { from { transform: scaleY(.88); opacity:.45; } to { transform: scaleY(1); opacity:.85; } }
-
-    .growth-arrow {
-      position: absolute;
-      right: 0;
-      top: 5%;
-      width: 86%;
-      height: 62%;
-      border-top: 12px solid rgba(255,255,255,0.86);
-      border-right: 12px solid rgba(255,255,255,0.86);
-      transform: rotate(-22deg);
-      border-radius: 0 40px 0 0;
+    nav a {
+        font-size: 13px;
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+        flex-shrink: 0;
     }
 
-    .growth-arrow::after {
-      content: "";
-      position: absolute;
-      right: -26px;
-      top: -34px;
-      border-left: 42px solid rgba(255,255,255,0.86);
-      border-top: 28px solid transparent;
-      border-bottom: 28px solid transparent;
-      transform: rotate(45deg);
+    nav a::after {
+        display: block;
     }
 
-    .line-graph {
-      position: absolute;
-      left: 3%;
-      top: 12%;
-      width: 76%;
-      height: 45%;
-      border-bottom: 2px solid rgba(255,255,255,0.12);
-      border-left: 2px solid rgba(255,255,255,0.12);
-    }
-
-    .line-graph svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 780px;
-      padding-bottom: 58px;
+    .hero {
+        min-height: 580px;
     }
 
     .hero-content h1 {
-      font-size: 56px;
-      line-height: 1.12;
-      margin-bottom: 18px;
-      color: white;
-      text-shadow: 0 8px 28px rgba(0,0,0,0.35);
-    }
-
-    .hero-content h1 span {
-      color: var(--accent);
+        font-size: 38px;
     }
 
     .hero-content p {
-      color: #e2e8f0;
-      font-size: 20px;
-      margin-bottom: 22px;
+        font-size: 16px;
     }
 
-    .hero-badges {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-bottom: 28px;
+    .hero-visual {
+        opacity: .25;
+        width: 90%;
+        right: -18%;
+        bottom: 4%;
     }
 
-    .hero-badges span {
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: white;
-      padding: 10px 15px;
-      border-radius: 4px;
-      font-weight: 700;
-      backdrop-filter: blur(10px);
+    .about-grid,
+    .grid,
+    .why-grid,
+    .stats,
+    .currency-grid {
+        grid-template-columns: 1fr;
     }
 
-    .hero-actions {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    .quote-slider {
+        height: 260px;
     }
-    .eyebrow { display:inline-block; color:var(--accent2); border:1px solid rgba(212,175,55,.45); padding:7px 14px; border-radius:30px; font-size:13px; letter-spacing:1px; text-transform:uppercase; margin-bottom:20px; }
-    .hero h1 { font-size: 55px; line-height:1.1; margin-bottom:22px; max-width:800px; animation: rise .9s ease both; }
-    .hero h1 span { color: var(--accent); }
-    .hero p { font-size:18px; margin-bottom:30px; max-width:700px; color:#dbeafe; animation: rise 1.1s ease both; }
-    @keyframes rise { from {opacity:0; transform: translateY(22px);} to {opacity:1; transform: translateY(0);} }
-    .btn { display:inline-block; background:var(--accent); color:#111827; padding:14px 28px; border-radius:4px; font-weight:800; margin-right:12px; box-shadow:0 14px 32px rgba(212,175,55,.25); border:0; cursor:pointer; }
-    .btn.secondary { background:transparent; color:white; border:1px solid rgba(255,255,255,.35); box-shadow:none; }
-    .btn.dark { background:var(--primary); color:white; }
 
-    .hero-card { background:rgba(255,255,255,.98); color:#111827; padding:34px; border-radius:4px; box-shadow:0 25px 60px rgba(0,0,0,.34); border-top:5px solid var(--accent); animation: floatCard 4s ease-in-out infinite; }
-    @keyframes floatCard { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-    .hero-card h3 { color:var(--secondary); margin-bottom:18px; font-size:24px; }
-    .hero-card ul { list-style:none; }
-    .hero-card li { margin-bottom:14px; padding-left:28px; position:relative; color:#334155; }
-    .hero-card li::before { content:'✓'; position:absolute; left:0; color:var(--blue); font-weight:bold; }
+    .quote h3 {
+        font-size: 22px;
+    }
 
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:-45px; padding:0 7%; position:relative; z-index:10; }
-    .stat-card { background:white; padding:26px; border-radius:4px; box-shadow:0 12px 38px rgba(15,23,42,.12); border-bottom:4px solid var(--accent); }
-    .stat-card h3 { font-size:30px; color:var(--secondary); margin-bottom:4px; }
-    .stat-card p { color:var(--muted); font-weight:700; font-size:14px; }
-
-    section { padding: 82px 7%; }
-    .section-title { text-align:center; margin-bottom:48px; }
-    .section-title h2 { font-size:38px; color:var(--primary); margin-bottom:12px; }
-    .section-title p { color:var(--muted); max-width:780px; margin:auto; }
-
-    .about { background:white; padding-top:105px; }
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:stretch; }
-    .about-box, .leadership-box { background:#f8fafc; padding:36px; border-radius:4px; border-left:5px solid var(--blue); box-shadow:0 8px 25px rgba(15,23,42,.06); }
-    .leadership-box { border-left-color:var(--accent); background:var(--primary); color:white; }
-    .leadership-box h3 { color:var(--accent); margin-bottom:12px; }
-
-    .visual-band { background: linear-gradient(120deg, rgba(6,16,31,.86), rgba(29,78,216,.72)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80') center/cover; color:white; text-align:center; }
-    .visual-band h2 { font-size:38px; margin-bottom:16px; }
-    .visual-band p { max-width:820px; margin:auto; color:#e0e7ff; }
-
-    .quote-section { background:linear-gradient(135deg,#06101f,#0b1f3a); color:white; overflow:hidden; }
-    .quote-slider { max-width:980px; margin:auto; position:relative; height:190px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:4px; display:flex; align-items:center; justify-content:center; padding:35px; }
-    .quote { position:absolute; opacity:0; transform:translateX(45px); animation:slideQuotes 40s infinite; text-align:center; max-width:850px; padding:0 25px; }
-    .quote:nth-child(1){animation-delay:0s}.quote:nth-child(2){animation-delay:5s}.quote:nth-child(3){animation-delay:10s}.quote:nth-child(4){animation-delay:15s}.quote:nth-child(5){animation-delay:20s}.quote:nth-child(6){animation-delay:25s}.quote:nth-child(7){animation-delay:30s}.quote:nth-child(8){animation-delay:35s}
-    .quote h3 { font-size:28px; line-height:1.35; color:white; margin-bottom:12px; font-weight:600; }
-    .quote p { color:var(--accent); font-weight:800; letter-spacing:.5px; }
-    @keyframes slideQuotes { 0%{opacity:0;transform:translateX(45px)}3%{opacity:1;transform:translateX(0)}10%{opacity:1;transform:translateX(0)}13%{opacity:0;transform:translateX(-45px)}100%{opacity:0;transform:translateX(-45px)} }
-
-    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .service-card { background:white; padding:30px; border-radius:4px; box-shadow:0 8px 28px rgba(15,23,42,.08); transition:all .3s ease; border-top:4px solid transparent; min-height:300px; opacity:0; transform:translateY(28px); }
-    .service-card.show { opacity:1; transform:translateY(0); }
-    .service-card:hover { transform:translateY(-7px); border-top-color:var(--accent); box-shadow:0 18px 45px rgba(15,23,42,.14); }
-    .service-card .icon { width:46px; height:46px; background:#eef2ff; color:var(--blue); display:flex; align-items:center; justify-content:center; border-radius:4px; font-size:22px; margin-bottom:18px; font-weight:800; }
-    .service-card h3 { color:var(--primary); margin-bottom:14px; font-size:22px; }
-    .service-card ul { padding-left:18px; color:#475569; }
-
-    .why { background:#f1f5f9; }
-    .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
-    .why-card { background:white; padding:28px 22px; border-radius:4px; text-align:center; border-bottom:4px solid var(--blue); box-shadow:0 8px 24px rgba(15,23,42,.08); }
-    .why-card h3 { color:var(--primary); margin-bottom:8px; }
-
-    .credentials { background:white; }
-    .credential-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
-    .credential-card { padding:25px; border:1px solid #e2e8f0; border-radius:4px; background:#f8fafc; text-align:center; }
-    .credential-card h3 { color:var(--primary); margin-bottom:8px; }
-    .credential-card p { color:var(--muted); font-size:14px; }
-
-    .testimonials { background:#f8fafc; }
-    .testimonial-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .testimonial-card { background:white; padding:28px; border-radius:4px; box-shadow:0 8px 28px rgba(15,23,42,.08); border-left:5px solid var(--accent); }
-    .testimonial-card p { color:#475569; margin-bottom:18px; font-style:italic; }
-    .testimonial-card h4 { color:var(--primary); }
-    .testimonial-card span { color:var(--muted); font-size:14px; }
-
-    .industries { background:white; }
-    .tags { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
-    .tag { background:#f8fafc; color:var(--secondary); padding:13px 22px; border-radius:4px; font-weight:700; border:1px solid #e2e8f0; }
-
-    .currency-section { background:white; }
-    .currency-widget { max-width:1080px; margin:auto; background:#f8fafc; border:1px solid #e2e8f0; border-radius:4px; padding:30px; box-shadow:0 8px 28px rgba(15,23,42,.08); }
-    .currency-top { display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-bottom:22px; }
-    .currency-top h3 { color:var(--primary); font-size:24px; }
-    .currency-top p { color:var(--muted); font-size:14px; }
-    .currency-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-    .currency-card { background:white; border-left:4px solid var(--accent); padding:18px; border-radius:4px; box-shadow:0 6px 18px rgba(15,23,42,.06); }
-    .currency-card h4 { color:var(--secondary); font-size:16px; margin-bottom:6px; }
-    .currency-card strong { color:var(--primary); font-size:22px; }
-    .currency-card span { display:block; color:var(--muted); font-size:13px; margin-top:4px; }
-
-    .lead-section { background:linear-gradient(135deg,#06101f,#102a4c); color:white; }
-    .lead-grid { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center; }
-    .lead-section h2 { font-size:38px; margin-bottom:14px; }
-    .lead-section p { color:#dbeafe; margin-bottom:24px; }
-    .lead-form { background:white; padding:30px; border-radius:4px; border-top:5px solid var(--accent); }
-    .lead-form input, .lead-form select, .lead-form textarea { width:100%; padding:13px; margin-bottom:14px; border:1px solid #cbd5e1; border-radius:4px; font-size:15px; }
-    .lead-form button { width:100%; }
-
-    .sub-hero { background:linear-gradient(120deg, rgba(6,16,31,.92), rgba(11,31,58,.88)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=80') center/cover; color:white; padding:90px 7%; text-align:center; }
-    .sub-hero h1 { font-size:44px; margin-bottom:12px; }
-    .content-box { background:white; padding:34px; border-radius:4px; box-shadow:0 8px 28px rgba(15,23,42,.08); margin-bottom:24px; }
-    .content-box h3 { color:var(--primary); margin-bottom:10px; }
-    .content-box p, .content-box li { color:#475569; }
-    .content-box ul { padding-left:20px; }
-
-    footer { background:#020617; color:#cbd5e1; text-align:center; padding:26px; font-size:14px; }
-    .whatsapp-float { position:fixed; right:22px; bottom:22px; background:#25d366; color:white; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; z-index:1200; box-shadow:0 12px 28px rgba(0,0,0,.28); }
-
-    @media(max-width:1000px){ .hero,.about-grid,.lead-grid{grid-template-columns:1fr}.services-grid,.why-grid,.stats,.credential-grid,.testimonial-grid,.currency-grid{grid-template-columns:repeat(2,1fr)} }
-    @media(max-width:650px){ header{align-items:flex-start} nav{margin-top:14px} nav a{margin-left:0;margin-right:13px;display:inline-block;margin-top:8px}.hero{padding-top:0;min-height:560px;background-size:cover;background-position:center}.hero-visual{opacity:.35;width:82%;right:-8%;bottom:4%}.hero-content{padding-bottom:36px}.hero-content h1{font-size:36px}.hero-content p{font-size:16px}.services-grid,.why-grid,.stats,.credential-grid,.testimonial-grid,.currency-grid{grid-template-columns:1fr}.quote-slider{height:250px}.quote h3{font-size:22px}.btn{margin-bottom:12px}.sub-hero h1{font-size:34px} } nav{margin-top:14px} nav a{margin-left:0;margin-right:13px;display:inline-block;margin-top:8px}.hero{padding-top:0;min-height:520px;background-size:cover;background-position:center}.hero-content{padding-bottom:36px}.hero-content h1{font-size:36px}.hero-content p{font-size:16px}.hero h1{font-size:36px}.services-grid,.why-grid,.stats,.credential-grid,.testimonial-grid,.currency-grid{grid-template-columns:1fr}.quote-slider{height:250px}.quote h3{font-size:22px}.btn{margin-bottom:12px}.sub-hero h1{font-size:34px} }
-  </style>
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+</style>
 </head>
+
 <body>
-  <header>
+
+<header>
     <div class="logo">D S India <span>Private Limited</span></div>
     <nav>
-      <a onclick="showPage('home')">Home</a>
-      <a onclick="showPage('aboutPage')">About</a>
-      <a onclick="showPage('servicesPage')">Services</a>
-      <a onclick="showPage('credentialsPage')">Credentials</a>
-      <a onclick="showPage('accountingPage')">Accounting & Audit</a>
-      <a onclick="showPage('advisoryPage')">Advisory</a>
-      <a onclick="showPage('contactPage')">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#accounting">Accounting & Audit</a>
+        <a href="#advisory">Advisory</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+</header>
 
-  <main id="home" class="page active">
-    <section class="hero">
-      <div class="hero-visual" aria-hidden="true">
+<section class="hero" id="home">
+    <div class="hero-visual" aria-hidden="true">
         <div class="line-graph">
-          <svg viewBox="0 0 500 220" preserveAspectRatio="none">
-            <polyline points="0,170 70,135 135,150 210,90 285,112 360,58 430,78 500,25" fill="none" stroke="#d4af37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            <polyline points="0,185 90,160 165,178 245,120 315,135 390,92 500,65" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+            <svg viewBox="0 0 500 220" preserveAspectRatio="none">
+                <polyline points="0,170 70,135 135,150 210,90 285,112 360,58 430,78 500,25" fill="none" stroke="#d4af37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                <polyline points="0,185 90,160 165,178 245,120 315,135 390,92 500,65" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
         </div>
         <div class="growth-arrow"></div>
         <div class="chart-bars">
-          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
         </div>
-      </div>
-      <div class="hero-content">
+    </div>
+
+    <div class="hero-content">
         <span class="eyebrow">Compliance • Accounting • Growth</span>
         <h1>Empowering Your <span>Growth.</span><br>Securing Your <span>Future.</span></h1>
         <p>Your Financial Goals. Our Professional Commitment.</p>
         <div class="hero-badges">
-          <span>Trusted Expertise</span>
-          <span>Smart Solutions</span>
-          <span>Lasting Success</span>
+            <span>Trusted Expertise</span>
+            <span>Smart Solutions</span>
+            <span>Lasting Success</span>
         </div>
-        <div class="hero-actions">
-          <a onclick="showPage('contactPage')" class="btn">Get Professional Support</a>
-          <a onclick="showPage('servicesPage')" class="btn secondary">Explore Services</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="stats">
-      <div class="stat-card"><h3>360°</h3><p>Compliance Support</p></div>
-      <div class="stat-card"><h3>DSC</h3><p>Low-Cost Certificate Services</p></div>
-      <div class="stat-card"><h3>GST</h3><p>Return & Notice Assistance</p></div>
-      <div class="stat-card"><h3>ITR</h3><p>Individual & Business Filing</p></div>
+        <a href="#contact" class="btn">Get Professional Support</a>
+        <a href="#services" class="btn secondary">Explore Services</a>
     </div>
+</section>
 
-    <section class="about">
-      <div class="section-title">
+<div class="stats">
+    <div class="stat-card"><h3>360°</h3><p>Compliance Support</p></div>
+    <div class="stat-card"><h3>DSC</h3><p>Low-Cost Certificate Services</p></div>
+    <div class="stat-card"><h3>GST</h3><p>Return & Notice Assistance</p></div>
+    <div class="stat-card"><h3>ITR</h3><p>Individual & Business Filing</p></div>
+</div>
+
+<section id="about">
+    <div class="section-title">
         <h2>Professional Financial & Compliance Partner</h2>
         <p>Built for individuals, professionals, MSMEs, startups and companies that need reliable compliance support.</p>
-      </div>
-      <div class="about-grid">
+    </div>
+    <div class="about-grid">
         <div class="about-box">
-          <p><strong>D S India Private Limited</strong> provides affordable, reliable and transparent services for DSC, GST, PF, ESI, Income Tax, bookkeeping, accounting, payroll, auditing, MIS reporting and business compliance.</p><br />
-          <p>Our approach is simple: clean books, clear documentation, timely filing, practical advisory and client-focused support.</p>
+            <h3>About D S India Private Limited</h3>
+            <p>D S India Private Limited provides affordable, reliable and transparent services for DSC, GST, PF, ESI, Income Tax, bookkeeping, accounting, payroll, auditing, MIS reporting and business compliance.</p>
         </div>
         <div class="leadership-box">
-          <h3>Founder & CEO</h3>
-          <p><strong>Dhananjay Singh</strong></p><br />
-          <p>Focused on delivering cost-effective and professional finance, tax and compliance solutions across India.</p>
+            <h3>Founder & CEO</h3>
+            <p><strong>Dhananjay Singh</strong></p>
+            <p>Focused on delivering cost-effective and professional finance, tax and compliance solutions across India.</p>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="visual-band">
-      <h2>Smart Compliance. Stronger Business Confidence.</h2>
-      <p>From DSC registration to tax filing and audit support, our service model is designed to reduce compliance stress and improve business readiness.</p>
-    </section>
+<section id="services">
+    <div class="section-title">
+        <h2>Professional Services</h2>
+        <p>Integrated finance, taxation and compliance services under one professional platform.</p>
+    </div>
 
-    <section class="quote-section">
-      <div class="section-title"><h2 style="color:white;">Finance Motivation</h2><p style="color:#cbd5e1;">Insightful thoughts for disciplined business growth.</p></div>
-      <div class="quote-slider">
+    <div class="grid">
+        <div class="card"><h3>Digital Signature Certificate</h3><ul><li>Class 2 DSC</li><li>Class 3 DSC</li><li>Individual & Organization DSC</li><li>DSC renewal and token support</li><li>Lower cost compared to market</li></ul></div>
+        <div class="card"><h3>GST Services</h3><ul><li>GST registration</li><li>GSTR-1 and GSTR-3B filing</li><li>GST reconciliation</li><li>GST notice support</li><li>LUT and refund support</li></ul></div>
+        <div class="card"><h3>Income Tax Services</h3><ul><li>ITR filing</li><li>Income Tax case handling</li><li>Tax planning</li><li>Notice reply support</li><li>Rectification and appeal support</li></ul></div>
+        <div class="card"><h3>PF & ESI Services</h3><ul><li>PF registration</li><li>ESI registration</li><li>Monthly PF return filing</li><li>Monthly ESI return filing</li><li>ECR support</li></ul></div>
+        <div class="card"><h3>Bookkeeping</h3><ul><li>Daily transaction posting</li><li>Sales and purchase entries</li><li>Expense classification</li><li>Ledger maintenance</li><li>Monthly book closing</li></ul></div>
+        <div class="card"><h3>Accounting</h3><ul><li>Financial statements</li><li>Bank reconciliation</li><li>Vendor/customer reconciliation</li><li>MIS reports</li><li>Accounting cleanup</li></ul></div>
+    </div>
+</section>
+
+<section class="insights">
+    <div class="section-title">
+        <h2>Insights That Drive Business Growth</h2>
+        <p>Insightful thoughts for disciplined business growth.</p>
+    </div>
+
+    <div class="quote-slider">
         <div class="quote"><h3>“Discipline in finance is the foundation of sustainable business growth.”</h3><p>D S India Insight</p></div>
         <div class="quote"><h3>“Compliance is not only a requirement; it is a mark of responsible business.”</h3><p>D S India Insight</p></div>
         <div class="quote"><h3>“Good accounting does not just record history; it guides better decisions.”</h3><p>D S India Insight</p></div>
@@ -403,178 +752,87 @@
         <div class="quote"><h3>“A compliant business earns trust before it earns revenue.”</h3><p>D S India Insight</p></div>
         <div class="quote"><h3>“Financial clarity converts uncertainty into confident action.”</h3><p>D S India Insight</p></div>
         <div class="quote"><h3>“Strong books, timely filings and clean records create long-term value.”</h3><p>D S India Insight</p></div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section>
-      <div class="section-title"><h2>Core Services</h2><p>Integrated finance, taxation and compliance services under one professional platform.</p></div>
-      <div class="services-grid service-animate">
-        <div class="service-card"><div class="icon">✦</div><h3>Digital Signature Certificate</h3><ul><li>Class 2 DSC</li><li>Class 3 DSC</li><li>Individual & Organization DSC</li><li>DSC renewal and token support</li><li>Lower cost compared to market</li></ul></div>
-        <div class="service-card"><div class="icon">₹</div><h3>GST Services</h3><ul><li>GST registration</li><li>GSTR-1 and GSTR-3B filing</li><li>GST reconciliation</li><li>GST notice support</li><li>LUT and refund support</li></ul></div>
-        <div class="service-card"><div class="icon">IT</div><h3>Income Tax Services</h3><ul><li>ITR filing</li><li>Income Tax case handling</li><li>Tax planning</li><li>Notice reply support</li><li>Rectification and appeal support</li></ul></div>
-        <div class="service-card"><div class="icon">BK</div><h3>Bookkeeping</h3><ul><li>Daily transaction posting</li><li>Sales and purchase entries</li><li>Expense classification</li><li>Ledger maintenance</li><li>Monthly book closing</li></ul></div>
-        <div class="service-card"><div class="icon">AC</div><h3>Accounting</h3><ul><li>Financial statements</li><li>Bank reconciliation</li><li>Vendor/customer reconciliation</li><li>MIS reports</li><li>Accounting cleanup</li></ul></div>
-        <div class="service-card"><div class="icon">AU</div><h3>Audit Support</h3><ul><li>Internal audit support</li><li>Statutory audit assistance</li><li>Tax audit working papers</li><li>Compliance review</li><li>Audit documentation</li></ul></div>
-      </div>
-    </section>
-
-    <section class="why">
-      <div class="section-title"><h2>Why Businesses Choose Us</h2><p>Professional approach, practical solutions and timely execution.</p></div>
-      <div class="why-grid">
+<section class="why" id="credentials">
+    <div class="section-title">
+        <h2>Why Businesses Choose Us</h2>
+        <p>Professional approach, practical solutions and timely execution.</p>
+    </div>
+    <div class="why-grid">
         <div class="why-card"><h3>Affordable</h3><p>Cost-effective services, especially DSC at competitive rates.</p></div>
         <div class="why-card"><h3>Reliable</h3><p>Professional support for taxation, compliance and accounting.</p></div>
         <div class="why-card"><h3>Timely</h3><p>Return filing and compliance support within required timelines.</p></div>
         <div class="why-card"><h3>Transparent</h3><p>Clear process, proper documentation and client-focused service.</p></div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="testimonials">
-      <div class="section-title"><h2>Client Testimonials</h2><p>Use this section only with actual client-approved testimonials before publishing.</p></div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card"><p>“D S India supported us with timely compliance and professional documentation.”</p><h4>Client Name</h4><span>Business Owner | Replace with real approved details</span></div>
-        <div class="testimonial-card"><p>“The team helped us complete our DSC and GST filing process smoothly.”</p><h4>Client Name</h4><span>MSME Client | Replace with real approved details</span></div>
-        <div class="testimonial-card"><p>“Reliable support for accounting and return filing requirements.”</p><h4>Client Name</h4><span>Professional Client | Replace with real approved details</span></div>
-      </div>
-    </section>
+<section id="accounting">
+    <div class="section-title">
+        <h2>Accounting, Bookkeeping & Audit Services</h2>
+        <p>Clean books, accurate reporting and organized audit documentation for better business control.</p>
+    </div>
+    <div class="grid">
+        <div class="card"><h3>Bookkeeping Services</h3><ul><li>Daily/weekly/monthly bookkeeping</li><li>Sales and purchase entry posting</li><li>Expense booking and classification</li><li>Journal entries and adjustments</li><li>Year-end book closure support</li></ul></div>
+        <div class="card"><h3>Bank Reconciliation</h3><ul><li>Bank statement matching</li><li>Unreconciled entry tracking</li><li>Receipt and payment mapping</li><li>Outstanding payment review</li><li>Monthly reconciliation reports</li></ul></div>
+        <div class="card"><h3>MIS Reporting</h3><ul><li>Monthly management reports</li><li>Revenue and expense analysis</li><li>Receivable and payable ageing</li><li>Cost center reporting</li><li>Performance dashboards</li></ul></div>
+        <div class="card"><h3>Internal Audit Support</h3><ul><li>Process review</li><li>Expense verification</li><li>Compliance checklist review</li><li>Control gap identification</li><li>Audit documentation</li></ul></div>
+        <div class="card"><h3>Statutory Audit Assistance</h3><ul><li>Audit schedule preparation</li><li>Ledger and voucher support</li><li>Confirmation follow-up support</li><li>Audit query coordination</li><li>Finalization assistance</li></ul></div>
+        <div class="card"><h3>Tax Audit Support</h3><ul><li>Form 3CD working support</li><li>Expense classification review</li><li>TDS and GST reconciliation</li><li>Fixed asset schedule support</li><li>Audit-ready data preparation</li></ul></div>
+    </div>
+</section>
 
-    <section class="currency-section">
-      <div class="section-title">
-        <h2>Live Rupee Conversion Rates</h2>
-        <p>Indicative live exchange rates against Indian Rupee for commonly used currencies. Rates are for information only and may vary by bank/payment provider.</p>
-      </div>
-      <div class="currency-widget">
-        <div class="currency-top">
-          <div>
-            <h3>Global Currency to INR Rates</h3>
-            <p id="currencyUpdated">Fetching latest currency conversion rates...</p>
-          </div>
-          <button class="btn dark" onclick="loadCurrencyRates()">Refresh Rates</button>
-        </div>
-        <div class="currency-grid" id="currencyGrid">
-          <div class="currency-card"><h4>USD</h4><strong>Loading...</strong><span>US Dollar</span></div>
-          <div class="currency-card"><h4>EUR</h4><strong>Loading...</strong><span>Euro</span></div>
-          <div class="currency-card"><h4>GBP</h4><strong>Loading...</strong><span>British Pound</span></div>
-          <div class="currency-card"><h4>AED</h4><strong>Loading...</strong><span>UAE Dirham</span></div>
-        </div>
-      </div>
-    </section>
+<section class="why" id="advisory">
+    <div class="section-title">
+        <h2>Business Compliance & Advisory</h2>
+        <p>Support beyond filing: planning, documentation, compliance health checks and management guidance.</p>
+    </div>
+    <div class="grid">
+        <div class="card"><h3>Virtual CFO Support</h3><ul><li>Monthly finance review</li><li>Cash flow monitoring</li><li>Budget vs actual review</li><li>Management reporting</li><li>Business finance guidance</li></ul></div>
+        <div class="card"><h3>Compliance Calendar</h3><ul><li>GST due dates</li><li>TDS due dates</li><li>PF/ESI due dates</li><li>Income tax timelines</li><li>Reminder-based tracking</li></ul></div>
+        <div class="card"><h3>TDS/TCS Services</h3><ul><li>TDS return filing</li><li>TDS reconciliation</li><li>Form 16/16A support</li><li>Challan verification</li><li>Notice support</li></ul></div>
+        <div class="card"><h3>Receivable Management</h3><ul><li>Outstanding report preparation</li><li>Customer reconciliation</li><li>Payment tracker maintenance</li><li>Ledger follow-up support</li><li>Ageing analysis</li></ul></div>
+        <div class="card"><h3>Payable Management</h3><ul><li>Vendor bill tracking</li><li>Payment due reports</li><li>Vendor reconciliation</li><li>Expense approval support</li><li>Payable ageing reports</li></ul></div>
+        <div class="card"><h3>Cash Flow Advisory</h3><ul><li>Cash inflow/outflow tracking</li><li>Monthly cash flow planning</li><li>Payment priority reports</li><li>Working capital review</li><li>Basic financial forecasting</li></ul></div>
+    </div>
+</section>
 
-    <section class="lead-section">
-      <div class="lead-grid">
-        <div>
-          <h2>Need Compliance Support?</h2>
-          <p>Send your requirement and our team will connect with you for DSC, GST, PF, ESI, ITR, accounting or audit services.</p>
-          <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20D%20S%20India%2C%20I%20need%20support%20for%20tax%20and%20compliance%20services." class="btn">Chat on WhatsApp</a>
-        </div>
-        <form class="lead-form" onsubmit="sendLead(event)">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="tel" id="phone" placeholder="Mobile Number" required />
-          <select id="service" required>
-            <option value="">Select Service</option>
-            <option>DSC</option><option>GST Return Filing</option><option>PF / ESI Return Filing</option><option>ITR Filing</option><option>Income Tax Case</option><option>Accounting / Audit</option>
-          </select>
-          <textarea id="message" rows="4" placeholder="Brief Requirement"></textarea>
-          <button class="btn dark" type="submit">Send Lead on WhatsApp</button>
-        </form>
-      </div>
-    </section>
-  </main>
+<section class="currency">
+    <div class="section-title">
+        <h2>Global Currency to INR Rates</h2>
+        <p>Indicative exchange rates against Indian Rupee for commonly used currencies.</p>
+    </div>
+    <div class="currency-grid" id="currencyGrid">
+        <div class="currency-card"><h3>Loading...</h3><p>Please wait</p></div>
+    </div>
+</section>
 
-  <main id="aboutPage" class="page">
-    <section class="sub-hero"><h1>About Us</h1><p>Professional finance, taxation and compliance services for modern businesses.</p></section>
-    <section><div class="content-box"><h3>Company Profile</h3><p>D S India Private Limited is a professional service organization focused on DSC, statutory compliance, taxation, accounting and audit support. The company aims to provide affordable, transparent and timely solutions for individuals and businesses across India.</p></div><div class="content-box"><h3>Leadership</h3><p><strong>Founder & CEO:</strong> Dhananjay Singh</p><p>The leadership vision is to simplify finance and compliance for clients through practical guidance, organized documentation and timely execution.</p></div></section>
-  </main>
+<section class="contact" id="contact">
+    <div class="section-title">
+        <h2>Speak With Our Team</h2>
+        <p>For DSC, GST, PF, ESI, Income Tax, ITR filing, accounting and auditing services, connect with D S India Private Limited today.</p>
+    </div>
+    <div class="contact-box">
+        <p><strong>Company:</strong> D S India Private Limited</p>
+        <p><strong>Founder & CEO:</strong> Dhananjay Singh</p>
+        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+        <p><strong>Email:</strong> info@dsindia.com</p>
+        <p><strong>Address:</strong> Add office address here</p>
+        <br>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hello%20D%20S%20India%2C%20I%20need%20support%20for%20tax%20and%20compliance%20services.">Chat on WhatsApp</a>
+    </div>
+</section>
 
-  <main id="servicesPage" class="page">
-    <section class="sub-hero"><h1>Our Services</h1><p>End-to-end support for DSC, GST, PF, ESI, Income Tax, Accounting and Audit.</p></section>
-    <section><div class="services-grid service-animate"><div class="service-card"><div class="icon">✦</div><h3>DSC Services</h3><ul><li>Class 2 and Class 3 DSC</li><li>Individual and organization DSC</li><li>DSC renewal</li><li>Token support</li><li>Affordable pricing</li></ul></div><div class="service-card"><div class="icon">✓</div><h3>PF & ESI</h3><ul><li>PF and ESI registration</li><li>Monthly returns</li><li>ECR support</li><li>Employee addition/deletion</li><li>Compliance handling</li></ul></div><div class="service-card"><div class="icon">₹</div><h3>GST</h3><ul><li>GST registration</li><li>Return filing</li><li>Reconciliation</li><li>Notice support</li><li>Annual return support</li></ul></div><div class="service-card"><div class="icon">IT</div><h3>Income Tax</h3><ul><li>ITR filing</li><li>Case handling</li><li>Notice reply</li><li>Tax planning</li><li>Appeal and rectification support</li></ul></div><div class="service-card"><div class="icon">⌘</div><h3>Accounting</h3><ul><li>Bookkeeping</li><li>Ledger maintenance</li><li>Bank reconciliation</li><li>Financial statements</li><li>MIS reporting</li></ul></div><div class="service-card"><div class="icon">↗</div><h3>Auditing</h3><ul><li>Internal audit support</li><li>Statutory audit support</li><li>Tax audit support</li><li>Compliance review</li><li>Documentation</li></ul></div></div></section>
-  </main>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hello%20D%20S%20India%2C%20I%20need%20support%20for%20tax%20and%20compliance%20services.">☏</a>
 
-  <main id="credentialsPage" class="page">
-    <section class="sub-hero"><h1>Credentials & Trust</h1><p>Publish only verified registration details and client-approved credentials.</p></section>
-    <section class="credentials"><div class="credential-grid"><div class="credential-card"><h3>Company Registration</h3><p>Add CIN / MCA details after verification.</p></div><div class="credential-card"><h3>GST Registration</h3><p>Add GSTIN if applicable and approved for public display.</p></div><div class="credential-card"><h3>MSME Registration</h3><p>Add UDYAM number if registered.</p></div><div class="credential-card"><h3>Professional Network</h3><p>Add authorized partner/vendor credentials if available.</p></div></div></section>
-    <section class="testimonials"><div class="section-title"><h2>Real Testimonials</h2><p>Replace these placeholders with actual written client approvals.</p></div><div class="testimonial-grid"><div class="testimonial-card"><p>“Add client-approved testimonial here.”</p><h4>Real Client Name</h4><span>Designation / Company</span></div><div class="testimonial-card"><p>“Add client-approved testimonial here.”</p><h4>Real Client Name</h4><span>Designation / Company</span></div><div class="testimonial-card"><p>“Add client-approved testimonial here.”</p><h4>Real Client Name</h4><span>Designation / Company</span></div></div></section>
-  </main>
+<footer>
+    © 2026 D S India Private Limited. All Rights Reserved.
+</footer>
 
-  <main id="accountingPage" class="page">
-    <section class="sub-hero"><h1>Accounting, Bookkeeping & Audit Services</h1><p>Clean books, accurate reporting and organized audit documentation for better business control.</p></section>
-    <section>
-      <div class="section-title"><h2>Complete Finance Operations Support</h2><p>Designed for businesses that need reliable monthly accounting, reconciliations, reporting and audit-ready records.</p></div>
-      <div class="services-grid service-animate">
-        <div class="service-card"><div class="icon">BK</div><h3>Bookkeeping Services</h3><ul><li>Daily/weekly/monthly bookkeeping</li><li>Sales and purchase entry posting</li><li>Expense booking and classification</li><li>Journal entries and adjustments</li><li>Year-end book closure support</li></ul></div>
-        <div class="service-card"><div class="icon">BR</div><h3>Bank Reconciliation</h3><ul><li>Bank statement matching</li><li>Unreconciled entry tracking</li><li>Receipt and payment mapping</li><li>Outstanding cheque/payment review</li><li>Monthly reconciliation reports</li></ul></div>
-        <div class="service-card"><div class="icon">LD</div><h3>Ledger Management</h3><ul><li>Customer ledger maintenance</li><li>Vendor ledger reconciliation</li><li>Advance and outstanding tracking</li><li>Ledger confirmation support</li><li>Balance cleanup assistance</li></ul></div>
-        <div class="service-card"><div class="icon">FS</div><h3>Financial Statements</h3><ul><li>Profit & Loss statement</li><li>Balance Sheet preparation</li><li>Cash flow statement support</li><li>Trial balance review</li><li>Schedules and notes preparation</li></ul></div>
-        <div class="service-card"><div class="icon">MIS</div><h3>MIS Reporting</h3><ul><li>Monthly management reports</li><li>Revenue and expense analysis</li><li>Receivable and payable ageing</li><li>Cost center/project reporting</li><li>Performance dashboards</li></ul></div>
-        <div class="service-card"><div class="icon">PR</div><h3>Payroll Accounting</h3><ul><li>Salary accounting entries</li><li>PF/ESI/TDS linkage support</li><li>Employee advance tracking</li><li>Payroll reconciliation</li><li>Payroll reports for management</li></ul></div>
-        <div class="service-card"><div class="icon">IA</div><h3>Internal Audit Support</h3><ul><li>Process review</li><li>Expense verification</li><li>Compliance checklist review</li><li>Control gap identification</li><li>Internal audit documentation</li></ul></div>
-        <div class="service-card"><div class="icon">SA</div><h3>Statutory Audit Assistance</h3><ul><li>Audit schedule preparation</li><li>Ledger and voucher support</li><li>Confirmation follow-up support</li><li>Audit query coordination</li><li>Finalization assistance</li></ul></div>
-        <div class="service-card"><div class="icon">TA</div><h3>Tax Audit Support</h3><ul><li>Form 3CD working support</li><li>Expense classification review</li><li>TDS and GST reconciliation</li><li>Fixed asset schedule support</li><li>Audit-ready data preparation</li></ul></div>
-      </div>
-    </section>
-    <section class="visual-band"><h2>From Transactions to Decision-Ready Reports</h2><p>Our accounting service helps businesses maintain clean books, reduce reconciliation gaps and prepare structured data for compliance, audit and management decisions.</p></section>
-  </main>
-
-  <main id="advisoryPage" class="page">
-    <section class="sub-hero"><h1>Business Compliance & Advisory</h1><p>Practical compliance support for startups, MSMEs, professionals and growing businesses.</p></section>
-    <section>
-      <div class="section-title"><h2>Advisory & Compliance Services</h2><p>Support beyond filing: planning, documentation, compliance health checks and management guidance.</p></div>
-      <div class="services-grid service-animate">
-        <div class="service-card"><div class="icon">VC</div><h3>Virtual CFO Support</h3><ul><li>Monthly finance review</li><li>Cash flow monitoring</li><li>Budget vs actual review</li><li>Management reporting</li><li>Business finance guidance</li></ul></div>
-        <div class="service-card"><div class="icon">CC</div><h3>Compliance Calendar</h3><ul><li>GST due dates</li><li>TDS due dates</li><li>PF/ESI due dates</li><li>Income tax timelines</li><li>Reminder-based compliance tracking</li></ul></div>
-        <div class="service-card"><div class="icon">TD</div><h3>TDS/TCS Services</h3><ul><li>TDS return filing</li><li>TDS reconciliation</li><li>Form 16/16A support</li><li>Challan verification</li><li>Notice support</li></ul></div>
-        <div class="service-card"><div class="icon">REG</div><h3>Business Registration Support</h3><ul><li>GST registration</li><li>MSME/Udyam assistance</li><li>Shop establishment support</li><li>Professional tax support</li><li>Basic documentation guidance</li></ul></div>
-        <div class="service-card"><div class="icon">DOC</div><h3>Documentation Support</h3><ul><li>Invoice format review</li><li>Agreement support coordination</li><li>Compliance file preparation</li><li>Ledger confirmation letters</li><li>Management certificates support</li></ul></div>
-        <div class="service-card"><div class="icon">NT</div><h3>Notice & Case Support</h3><ul><li>GST notice reply assistance</li><li>Income tax notice support</li><li>Document compilation</li><li>Reconciliation statements</li><li>Professional case coordination</li></ul></div>
-        <div class="service-card"><div class="icon">AR</div><h3>Receivable Management</h3><ul><li>Outstanding report preparation</li><li>Customer reconciliation</li><li>Payment tracker maintenance</li><li>Ledger follow-up support</li><li>Ageing analysis</li></ul></div>
-        <div class="service-card"><div class="icon">AP</div><h3>Payable Management</h3><ul><li>Vendor bill tracking</li><li>Payment due reports</li><li>Vendor reconciliation</li><li>Expense approval support</li><li>Payable ageing reports</li></ul></div>
-        <div class="service-card"><div class="icon">CF</div><h3>Cash Flow Advisory</h3><ul><li>Cash inflow/outflow tracking</li><li>Monthly cash flow planning</li><li>Payment priority reports</li><li>Working capital review</li><li>Basic financial forecasting</li></ul></div>
-      </div>
-    </section>
-    <section class="why"><div class="section-title"><h2>Advisory Approach</h2><p>We focus on practical implementation, clear reports and organized compliance records.</p></div><div class="why-grid"><div class="why-card"><h3>Assess</h3><p>Understand current books, filings and compliance gaps.</p></div><div class="why-card"><h3>Organize</h3><p>Structure documents, ledgers, reconciliations and reports.</p></div><div class="why-card"><h3>File</h3><p>Support timely return filing and compliance submissions.</p></div><div class="why-card"><h3>Review</h3><p>Provide management insights and improvement areas.</p></div></div></section>
-  </main>
-
-  <main id="contactPage" class="page">
-    <section class="sub-hero"><h1>Contact Us</h1><p>Connect with D S India Private Limited for tax, DSC and compliance support.</p></section>
-    <section class="lead-section"><div class="lead-grid"><div><h2>Speak With Our Team</h2><p>For DSC, GST, PF, ESI, Income Tax, ITR filing, accounting and auditing services, connect with us today.</p><p><strong>Founder & CEO:</strong> Dhananjay Singh</p><p><strong>Phone:</strong> +91 XXXXXXXXXX</p><p><strong>Email:</strong> info@dsindia.com</p><p><strong>Address:</strong> Add office address here</p><br><a href="https://wa.me/91XXXXXXXXXX?text=Hello%20D%20S%20India%2C%20I%20need%20support%20for%20tax%20and%20compliance%20services." class="btn">WhatsApp Now</a></div><form class="lead-form" onsubmit="sendLead(event)"><input type="text" id="name2" placeholder="Your Name" required /><input type="tel" id="phone2" placeholder="Mobile Number" required /><select id="service2" required><option value="">Select Service</option><option>DSC</option><option>GST Return Filing</option><option>PF / ESI Return Filing</option><option>ITR Filing</option><option>Income Tax Case</option><option>Accounting / Audit</option></select><textarea id="message2" rows="4" placeholder="Brief Requirement"></textarea><button class="btn dark" type="submit">Send Lead on WhatsApp</button></form></div></section>
-  </main>
-
-  <a class="whatsapp-float" href="https://wa.me/91XXXXXXXXXX?text=Hello%20D%20S%20India%2C%20I%20need%20support%20for%20tax%20and%20compliance%20services." title="Chat on WhatsApp">☏</a>
-
-  <footer>© 2026 D S India Private Limited. All Rights Reserved.</footer>
-
-  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-      document.getElementById(pageId).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      animateCards();
-    }
-
-    function sendLead(event) {
-      event.preventDefault();
-      const form = event.target;
-      const name = form.querySelector('input[type="text"]').value;
-      const phone = form.querySelector('input[type="tel"]').value;
-      const service = form.querySelector('select').value;
-      const message = form.querySelector('textarea').value;
-      const text = `Hello D S India, I need support. Name: ${name}, Phone: ${phone}, Service: ${service}, Requirement: ${message}`;
-      window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(text)}`, '_blank');
-    }
-
-    function animateCards() {
-      const cards = document.querySelectorAll('.page.active .service-card');
-      cards.forEach((card, index) => {
-        setTimeout(() => card.classList.add('show'), index * 120);
-      });
-    }
-
-    async function loadCurrencyRates() {
-      const currencyGrid = document.getElementById('currencyGrid');
-      const updatedText = document.getElementById('currencyUpdated');
-      if (!currencyGrid || !updatedText) return;
-
-      const currencies = [
+<script>
+async function loadCurrencyRates() {
+    const currencies = [
         { code: 'USD', name: 'US Dollar' },
         { code: 'EUR', name: 'Euro' },
         { code: 'GBP', name: 'British Pound' },
@@ -583,46 +841,26 @@
         { code: 'AUD', name: 'Australian Dollar' },
         { code: 'CAD', name: 'Canadian Dollar' },
         { code: 'JPY', name: 'Japanese Yen' }
-      ];
+    ];
 
-      currencyGrid.innerHTML = currencies.map(item => `<div class="currency-card"><h4>${item.code}</h4><strong>Loading...</strong><span>${item.name}</span></div>`).join('');
-      updatedText.textContent = 'Fetching latest rates...';
+    const grid = document.getElementById('currencyGrid');
 
-      try {
-        const response = await fetch('https://open.er-api.com/v6/latest/USD');
+    try {
+        const response = await fetch('https://open.er-api.com/v6/latest/INR');
         const data = await response.json();
 
-        if (!data || !data.rates) throw new Error('Rates not available');
-
-        const inrResponse = await fetch('https://open.er-api.com/v6/latest/INR');
-        const inrData = await inrResponse.json();
-
-        currencyGrid.innerHTML = currencies.map(item => {
-          const rate = inrData.rates[item.code];
-          const reverseRate = rate ? (1 / rate).toFixed(2) : 'N/A';
-          return `<div class="currency-card"><h4>1 ${item.code}</h4><strong>₹ ${reverseRate}</strong><span>${item.name}</span></div>`;
+        grid.innerHTML = currencies.map(item => {
+            const rate = data.rates[item.code];
+            const reverseRate = rate ? (1 / rate).toFixed(2) : 'N/A';
+            return `<div class="currency-card"><h3>1 ${item.code}</h3><strong>₹ ${reverseRate}</strong><p>${item.name}</p></div>`;
         }).join('');
-
-        updatedText.textContent = `Last updated: ${new Date().toLocaleString('en-IN')} | Rates against Indian Rupee (INR)`;
-      } catch (error) {
-        currencyGrid.innerHTML = currencies.map(item => `<div class="currency-card"><h4>${item.code}</h4><strong>N/A</strong><span>${item.name}</span></div>`).join('');
-        updatedText.textContent = 'Live rates could not be fetched. Please check internet/API access.';
-      }
+    } catch (error) {
+        grid.innerHTML = '<div class="currency-card"><h3>Rates unavailable</h3><p>Please check internet/API access.</p></div>';
     }
+}
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.service-card').forEach((card, index) => {
-            setTimeout(() => card.classList.add('show'), index * 120);
-          });
-        }
-      });
-    }, { threshold: .2 });
+loadCurrencyRates();
+</script>
 
-    document.querySelectorAll('.service-animate').forEach(section => observer.observe(section));
-    animateCards();
-    loadCurrencyRates();
-  </script>
 </body>
 </html>
